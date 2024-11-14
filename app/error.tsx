@@ -8,7 +8,7 @@ type ErrorProps = {
   refresh: () => void;
 };
 
-const error: React.FC<ErrorProps> = ({ error, refresh }) => {
+const error: React.FC<ErrorProps> = ({ refresh }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-custom-dark  text-white">
       <div className="max-w-lg text-center flex flex-col">

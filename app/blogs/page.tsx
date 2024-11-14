@@ -1,51 +1,3 @@
-// import Navbar from "../Navbar";
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card"
-// import { client } from '../api/sanity';
-
-// import Image from "next/image";
-// import { simpleBlogCard } from "@/lib/type";
-
-// async function getData() {
-
-// 	const query = `*[_type == 'blog'] | order(_createdAt desc) {
-// 		title,
-// 		  smallDescription,
-// 		  "currentSlug":slug.current,
-//       titleImage
-// 	  }`;
-
-// 	  const data = await client.fetch(query);
-// 	  return data;
-// }
-
-// const options = { next: { revalidate: 30 } };
-
-// export default async function page (){
-//   const data: simpleBlogCard = await getData();
-
-//   console.log("data", data)
-//   return (
-//     <div>
-//       <Navbar />
-//       <h1>Welcome to blogs</h1>
-//       <div>
-//         {data.map((item, index) => (
-//           <Card key={index}>{item}</Card>
-//         ))}
-
-//       </div>
-
-//     </div>
-//   );
-// };
-
 import Navbar from "../Navbar";
 import {
   Card,
@@ -78,7 +30,7 @@ async function getData() {
   return data;
 }
 
-const options = { next: { revalidate: 30 } };
+// const options = { next: { revalidate: 30 } };
 
 export default async function page() {
   const data: simpleBlogCard = await getData();
