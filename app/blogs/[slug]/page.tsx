@@ -22,9 +22,9 @@ interface simpleCard {
 	titleImage: string;
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-
-  const data: simpleCard = await getData(params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+	
+  const data: simpleCard = await getData((await params).slug);
   console.log('data', data.content)
 
   if (!data) return <div>Loading...</div>
